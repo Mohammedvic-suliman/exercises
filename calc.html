@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>@d11_1l</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="st.css">
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Amiri">
+    
+     <style>
+            
+       
+     
+       *{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Amiri';
+}
+body{
+    background-color: #e8effc;
+    line-height: 1.5;
+    font-size: 1.1rem;
+}
+input{
+    font-family: ''; 
+}
+.calc-wrapper{
+    max-width: 900px;
+    padding: 4rem 1rem;
+    margin: 0 auto;
+}
+.calc-wrapper > div{
+    background: #fff;
+    padding: 1.5rem 2.5rem;
+}
+.calc-content{
+    margin-bottom: 1.6rem;
+}
+.calc-content h2,
+.result-content h2{
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align:  center;
+    opacity: 0.8;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 0.4rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+#calc-form,
+.saving-info{
+    margin-top: 1.6rem;
+}
+.form-item{
+    margin: 0.8rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.input-name span{
+    background-color: #476c96;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 800;
+}
+.input-name{
+    display: flex;
+    align-items: center;
+}
+.input-name label{
+    padding-left: 0.8rem;
+}
+.input-control input{
+    font-size: 1.1rem;
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    padding: 0.4rem 0.6rem;
+    border-radius: 3px;
+}
+.input-control input:focus{
+    outline: none;
+}
+.input-control span{
+    padding-right: 0.6rem;
+    font-weight: 300;
+    opacity: 0.7;
+}
+.btns{
+    margin-top: 2rem;
+}
+.btns input{
+    background-color: #476c96;
+    display: block;
+    border: none;
+    margin: 1rem auto 0 auto;
+    font-family: inherit;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    color: #fff;
+    padding: 0.7rem 0;
+    width: 180px;
+    border-radius: 3px;
+    outline: 0;
+    cursor: pointer;
+}
+.btns input:hover{
+    opacity: 0.8;
+}
+.saving-info{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    gap: 1rem;
+}
+.saving-info div{
+    padding: 1rem 0;
+    background: #476c96;;
+    color: #fff;
+}
+.saving-info div h4{
+    font-weight: 500;
+    padding: 0.6rem 0;
+}
+.saving-info div span{
+    font-weight: 400;
+    font-size: 1.75rem;
+}
+
+@media screen and (max-width: 992px){
+    .saving-info{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 680px){
+    .form-item{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .input-name{
+        margin-bottom: 0.6rem;
+    }
+    .input-control span{
+        display: block;
+    }
+}
+       
+       
+       
+     </style>
+    
+  </head>
+  <body dir="rtl">
+
+    <div class = "calc-wrapper">
+      <div class = "calc-content">
+        <h2>خطط للأدخار</h2>
+        <form id = "calc-form">
+
+          <!-- item -->
+          <div class = "form-item">
+            <div class = "input-name">
+              <span>1</span>
+              <label for = "amount">ادخل المبلغ المراد الادخار لأجله</label>
+            </div>
+            <div class = "input-control">
+           
+              <input type = "number" placeholder="0" id = "amount" min = "0" step = "any" required>
+            </div>
+          </div>
+          <!-- end of item -->
+
+        
+
+          <!-- item -->
+          <div class = "form-item">
+            <div class = "input-name">
+              <span>2</span>
+              <label for = "no-of-month">عدد الأشهر</label>
+            </div>
+            <div class = "input-control">
+             
+              <input type = "number" placeholder="0" id = "no-of-month" min = "0" step = "any" required>
+            </div>
+          </div>
+          <!-- end of item -->
+
+          <div class = "btns">
+            <input type = "submit" id = "calc-btn" value = "أحسب">
+            <input type = "button" id = "clear-btn" value = "اعادة ضبط">
+          </div>
+        </form>
+      </div>
+
+      <div class = "result-content">
+        <h2>أختر خطتك</h2>
+        <div class = "saving-info">
+          <div>
+            <h4>أدخار يومي</h4>
+            <span>&mdash;</span>
+          </div>
+          <div>
+            <h4>أدخار اسبوعي</h4>
+            <span>&mdash;</span>
+          </div>
+          <div>
+            <h4>أدخار شهري</h4>
+            <span>&mdash;</span>
+          </div>
+          <div>
+            <h4>الاجمالي</h4>
+            <span>&mdash;</span>
+          </div>
+      
+              
+        </div>
+      </div>
+    </div>
+
+    
+    
+    <script>
+    
+      const calcForm = document.getElementById('calc-form'),
+      Amount = document.getElementById('amount'),
+      noOfMonth = document.getElementById('no-of-month'),
+      calcBtn = document.getElementById('calc-btn'),
+      clearBtn = document.getElementById('clear-btn'),
+      SavingInfoList = document.querySelectorAll('.saving-info div span');
+
+calcForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    showSavingInfo();
+});
+
+clearBtn.addEventListener('click', clearInputAndResult);
+
+function showSavingInfo(){
+    
+    SavingInfoList[0].innerHTML =  `${parseFloat(Amount.value/(noOfMonth.value*30)).toFixed(2).toLocaleString()} يوميا`;
+    SavingInfoList[1] .innerHTML =  `${parseFloat(Amount.value/(noOfMonth.value*4)).toFixed(2).toLocaleString()} اسبوعيا`;
+    SavingInfoList[2].innerHTML =  `${parseFloat(Amount.value/noOfMonth.value).toFixed(2).toLocaleString()} شهريا`;
+    SavingInfoList[3].innerHTML = `${Amount.value.toLocaleString()}`;
+}
+
+function clearInputAndResult(){
+    calcForm.reset();
+    SavingInfoList.forEach(item => {
+        item.innerHTML = "&mdash;";
+        });
+}
+    </script>
+  </body>
+</html>
