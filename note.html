@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>mohammed suliman</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="note.css">
+    <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Tajawal">
+  </head>
+  <body dir="rtl">
+    
+    <div class = "note">
+      <h2>ملاحظاتك</h2>
+      <div class = "note-input">
+        <h3>اضف ملاحظة جديدة</h3>
+        <div class = "note-wrapper">
+          <input type = "text" id = "note-title" placeholder="ادخل العنوان">
+          <textarea rows = "5" placeholder="أكتب ملاحظاتك هنا" id = "note-content"></textarea>
+          <button type = "button" class = "btn" id = "add-note-btn">
+            اضافة
+            <span><i class = "fas fa-plus"></i></span>
+            
+          </button>
+        </div>
+      </div>
+
+      <div class = "note-list">
+
+        <!-- note item -->
+        <!--
+         <div class = "note-item">
+         
+          <h3>أهلا</h3> 
+        <div class="time">
+        <p>...</p>
+        </div>
+          <p style="background-color: #e8effc;">اسعد الله يومك</p>
+          <button type = "button" class = "btn delete-note-btn">
+             حذف
+            <span><i class = "fas fa-trash"></i></span>
+          </button>
+        </div>
+    -->
+      </div>
+
+      <button type = "button" class = "btn" id = "delete-all-btn">
+        حذف الكل
+        <span><i class = "fas fa-trash"></i></span>
+      </button>
+    </div>
+
+    <script src="note.js"></script>
+  </body>
+</html>
